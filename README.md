@@ -143,6 +143,20 @@ zevqi team join --server https://zevqi.com --key zlt_... --email you@company.com
 
 Lessons then sync automatically after each quiz. The team server is a hosted service and is not part of this open-source repository.
 
+### What is free and what is in the team plan
+
+The line is simple: everything that works for one person on one machine is free and open source. Everything that needs shared memory across people is the hosted team plan.
+
+| Free (this repository, MIT) | Team plan (hosted, free trial) |
+|---|---|
+| `zevqi audit`, the one-page knowledge-risk read-out from git history | One shared knowledge map across every developer and repository |
+| `zevqi scan`, lessons, attested reviews, your own streak | Review evidence from the whole team, with history and weekly coverage trends |
+| The local dashboard (`zevqi ui`) for your own work | A Knowledge risk page: what would be left if someone went, onboarding by area, CODEOWNERS draft |
+| Your reviews and lessons stay on your machine unless you join a team | Weekly summaries by email and Slack, pull-request comments and gate, hand-off tasks for GitHub and Linear, PDF report, review-record export |
+| No account, no key, nothing sent | Read-only viewers for leaders, team keys, an activity log of changes to access and exports |
+
+You are welcome to build your own dashboard on the open-source CLI. The hosted service exists for teams that would rather not run and maintain one.
+
 ### Gate pull requests in CI
 
 `zevqi check` asks your team server which files a pull request changes that still have AI-written changes nobody on the team has understood. It sends only file paths and the repository name, uses a team key from `ZEVQI_TEAM_KEY` (no `team join` needed in CI), prints inline GitHub annotations and a job summary, and can name teammates who could review each file.
@@ -214,4 +228,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) and the [CHANGELOG](CHANGELOG.md).
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). You can use, change and redistribute the code, including in a fork or inside your company.
+
+The license covers the code. It does not cover the **Zevqi** name or logo. Please do not use them for a fork or a hosted service in a way that suggests it is the official Zevqi, and give your fork its own name.
